@@ -561,7 +561,7 @@ void showHelp(){
                         "\nMozliwe funkcjonalnosci: \n\t*addMatrix \t*subtractMatrix \t*multiplyMatrix"
                         "\n\t*multiplyByScalar \t*transpozeMatrix \t*powerMatrix \t*determinantMatrix"
                         "\n\t*matrixIsDiagonal \t*swap \t*sortRow \t*sortRowsInMatrix"
-                        "\nPo wybraniu funkcjonalnosci zytkownik zostanie poproszony o podanie wymiarow macierzy na ktorych "
+                        "\nPo wybraniu funkcjonalnosci uzytkownik zostanie poproszony o podanie wymiarow macierzy na ktorych "
                         "\nprogram ma prowadzic obliczenia oraz wybrac czy chcemy operowac na liczbach calkowitych "
                         "\nczy zmiennoprzecinkowych nastepnie poprosi o wypelnienie macierzy wartosciami ktore wprowadzane "
                         "\nsa bezposrednio z klawiatury wprowadzanie trwa do momentu wpisania wszystkich potrzebnych dla danej macierzy wartosci"
