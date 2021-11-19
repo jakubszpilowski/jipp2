@@ -13,6 +13,8 @@ class Vector{
 private:
     double x;
     double y;
+    friend Vector operator*(const double &lhs, const Vector &rhs);
+    friend ostream& operator<<(ostream &lhs, const Vector &rhs);
 
 public:
     Vector();

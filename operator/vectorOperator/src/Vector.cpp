@@ -44,6 +44,15 @@ bool Vector::operator==(const Vector &rhs) const {
     return x == rhs.x && y == rhs.y;
 }
 
+Vector operator*(const double &lhs, const Vector &rhs) {
+    return {lhs * rhs.x, lhs * rhs.y};
+}
+
+ostream &operator<<(ostream &lhs, const Vector &rhs) {
+    lhs << "[" << rhs.x << ", " << rhs.y << "]";
+    return lhs;
+}
+
 
 
 
