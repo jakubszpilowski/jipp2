@@ -19,6 +19,8 @@ public:
     Node(double x, double y);
 
     void display() const;
+    double getX() const;
+    double getY() const;
 
     void updateValue(double x, double y);
 };

@@ -24,4 +24,12 @@ double pointsDistance(Node a, Node b) {
     return sqrt(pow(b.x - a.x, 2) + pow(b.y - a.y, 2));
 }
 
+double Node::getX() const {
+    return x;
+}
+
+double Node::getY() const {
+    return y;
+}
+
 
