@@ -10,7 +10,12 @@ void Figure::printFigure() const {
     cout << color << " " << name << endl;
 }
 
-double Rectangle::getArea() const {
+Figure::Figure() {
+    name = " ";
+    color = " ";
+}
+
+double Rectangle::getArea() {
     return a * b;
 }
 
@@ -21,10 +26,13 @@ double Rectangle::getPerimeter() const {
 Rectangle::Rectangle(const string &name, const string &color, double a, double b): Figure(name, color), a(a), b(b) {
 }
 
+Rectangle::Rectangle(double a, double b): Figure(), a(a), b(b) {
+}
+
 Circle::Circle(const string &name, const string &color, double r): Figure(name, color), r(r) {
 }
 
-double Circle::getArea() const {
+double Circle::getArea() {
     return r * r * 3.14;
 }
 
@@ -32,12 +40,15 @@ double Circle::getPerimeter() const {
     return 2 * 3.14 * r;
 }
 
+Circle::Circle(double r): Figure(), r(r) {
+}
+
 
 Triangle::Triangle(const string &name, const string &color, double a, double b, double c, double h):
     Figure(name, color), a(a), b(b), c(c), h(h){
 }
 
-double Triangle::getArea() const {
+double Triangle::getArea() {
     return 0.5 * a * h;
 }
 

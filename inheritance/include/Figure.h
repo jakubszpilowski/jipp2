@@ -13,7 +13,9 @@ protected:
 
 public:
     Figure(const string &name, const string &color);
+    Figure();
     void printFigure() const;
+    virtual double getArea() = 0;
 };
 
 class Rectangle: public Figure{
@@ -21,8 +23,9 @@ protected:
     double a, b;
 
 public:
+    Rectangle(double a, double b);
     Rectangle(const string &name, const string &color, double a, double b);
-    double getArea() const;
+    double getArea();
     double getPerimeter() const;
 };
 
@@ -31,8 +34,9 @@ protected:
     double r;
 
 public:
+    Circle(double r);
     Circle(const string &name, const string &color, double r);
-    double getArea() const;
+    double getArea();
     double getPerimeter() const;
 };
 
@@ -42,7 +46,7 @@ protected:
 
 public:
     Triangle(const string &name, const string &color, double a, double b, double c, double h);
-    double getArea() const;
+    double getArea();
     double getPerimeter() const;
 };
 
