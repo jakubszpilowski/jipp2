@@ -7,7 +7,8 @@ Track::Track(const string& a, const string& t): artist(a), title(t) {
 }
 
 void Track::printTrack() {
-    cout << title << " by " << artist << endl;
+    char a = 31;
+    cout << a  << " " << title << " by " << artist << endl;
 }
 
 string Track::getTitle() {

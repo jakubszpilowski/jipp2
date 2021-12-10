@@ -26,7 +26,7 @@ int main(){
     cout << "==========" << endl;
 
     cout << "DELETING" << endl;
-    p.deleteTrack("Sandstorm");
+    p.deleteTrack("Freak");
 
     p.printTracks();
 
