@@ -10,15 +10,15 @@ using namespace std;
 
 int main(){
     string line;
-    ofstream tram("C:/Users/Lenovo/CLionProjects/jipp2/fileOperations/trams.csv"),
-        bus("C:/Users/Lenovo/CLionProjects/jipp2/fileOperations/buses.csv");
+    ofstream tram("../../fileOperations/trams.csv"),
+        bus("../../fileOperations/buses.csv");
 
     if(!tram.is_open() || !bus.is_open()){
         cout << "Error opening: trams or buses" << endl;
         exit(1);
     }
 
-    ifstream file("C:/Users/Lenovo/CLionProjects/jipp2/fileOperations/stops.csv");
+    ifstream file("../../fileOperations/stops.csv");
     if(file.is_open()){
         while(!file.eof()){
             getline(file, line);
@@ -33,6 +33,8 @@ int main(){
         cout << "Error opening file" << endl;
         exit(1);
     }
+
+    cout << "Stops has been successfully saved in the right place" << endl;
 
     tram.close();
     bus.close();
