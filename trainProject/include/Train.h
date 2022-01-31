@@ -4,21 +4,26 @@
 #ifndef JIPP2_TRAIN_H
 #define JIPP2_TRAIN_H
 #include <iostream>
-#include <vector>
+#include <string>
+#include <cstring>
 
+using namespace std;
+
+template <string str>
 class Train{
 private:
-    int cars;
-    string start;
-    string over;
-    string platform;
-    string time;
+    str nazwa;
+    str relacja;
+    str godzina_p, godzina_o;
+    str status;
+    str peron;
+    char typ;
 
 public:
+    Train(char typ, str nazwa, str relacja, str godzina, str status, str peron);
     Train();
-    Train(int c, string s, string o, string p, string t);
-    void setTime(string t);
-
+    str setStatus();
+    virtual void printData() = 0;
 };
 
 #endif //JIPP2_TRAIN_H
