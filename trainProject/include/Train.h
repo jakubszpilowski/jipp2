@@ -10,7 +10,9 @@
 
 using namespace std;
 
-//template<typename S>
+/**
+ * Klasa nadrzędna reprezentująca pociąg
+ */
 class Train{
 protected:
     char typ;
@@ -23,34 +25,49 @@ public:
     Train();
     Train(char, string, string, int, string);
     virtual void printTrain() = 0;
+    void setStatus(int i);
     string getStatus() const;
 };
 
+/**
+ * Klasa dziedzicząca po klasie Train
+ */
 class Pasazerski: public Train{
 private:
     czas_aktualny przyjazd;
     czas_aktualny odjazd;
 
 public:
-    Pasazerski(short godz_przyjazu, short minuta_przyjazu, short godzina_odjazdu, short minuta_odjazu);
+    Pasazerski(string, string, int, string, short, short, short, short);
+    void printTime();
     void printTrain();
 };
 
+
+/**
+ * Klasa dziedzicząca po klasie Train
+ */
 class Towarowy: public Train{
 private:
     czas_aktualny przejazd;
 
 public:
-    Towarowy(short godz, short minuta);
+    Towarowy(string, int, string, short, short);
+    void printTime();
     void printTrain();
 };
 
+
+/**
+ * Klasa dziedzicząca po klasie pociąg
+ */
 class Drezyna: public Train{
 private:
     czas_aktualny przejazd;
 
 public:
-    Drezyna(short godz, short minuta);
+    Drezyna(int, string, short, short);
+    void printTime();
     void printTrain();
 };
 
