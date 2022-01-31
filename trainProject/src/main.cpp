@@ -12,23 +12,26 @@ vector<vector<string>> content;
 
 int main(int argc, char* argv[]){
     int op;
-    struct czas aktualny_czas;
-    aktualny_czas.godzina = 8;
-    aktualny_czas.minuta = 55;
+    czas_aktualny aktualny;
+    aktualny.godzina = 8;
+    aktualny.minuta = 55;
+
+    string name = "../../trainProject/";
+    name.append(argv[1]);
+    pobierzRozklad(name);
 
     do{
         menu();
         cin >> op;
     }while(op != 0);
 
-    string name = "../../trainProject/";
-    name.append(argv[1]);
 
-    pobierzRozklad(name);
-    rozklad(aktualny_czas);
 
-    aktualizujCzas(&aktualny_czas);
-    rozklad(aktualny_czas);
+
+    rozklad(aktualny);
+
+    aktualizujCzas(&aktualny);
+    rozklad(aktualny);
 
     cout << "Koniec programu " << endl;
 

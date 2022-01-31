@@ -6,24 +6,52 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include "funkcje.h"
 
 using namespace std;
 
-template <string str>
+//template<typename S>
 class Train{
-private:
-    str nazwa;
-    str relacja;
-    str godzina_p, godzina_o;
-    str status;
-    str peron;
+protected:
     char typ;
+    string nazwa;
+    string relacja;
+    int peron;
+    string status;
 
 public:
-    Train(char typ, str nazwa, str relacja, str godzina, str status, str peron);
     Train();
-    str setStatus();
-    virtual void printData() = 0;
+    Train(char, string, string, int, string);
+    virtual void printTrain() = 0;
+    string getStatus() const;
+};
+
+class Pasazerski: public Train{
+private:
+    czas_aktualny przyjazd;
+    czas_aktualny odjazd;
+
+public:
+    Pasazerski(short godz_przyjazu, short minuta_przyjazu, short godzina_odjazdu, short minuta_odjazu);
+    void printTrain();
+};
+
+class Towarowy: public Train{
+private:
+    czas_aktualny przejazd;
+
+public:
+    Towarowy(short godz, short minuta);
+    void printTrain();
+};
+
+class Drezyna: public Train{
+private:
+    czas_aktualny przejazd;
+
+public:
+    Drezyna(short godz, short minuta);
+    void printTrain();
 };
 
 #endif //JIPP2_TRAIN_H

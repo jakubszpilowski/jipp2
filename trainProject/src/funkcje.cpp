@@ -46,7 +46,7 @@ void pobierzRozklad(string fname)
     }
 }
 
-void rozklad(struct czas aktualny)
+void aktualnyCzas(czas_aktualny aktualny)
 {
     if(aktualny.minuta < 10 && aktualny.godzina > 10)
         cout << setw(50) << "AKTUALNY CZAS: " << aktualny.godzina << ":0" << aktualny.minuta << endl;
@@ -56,6 +56,11 @@ void rozklad(struct czas aktualny)
         cout << setw(50) << "AKTUALNY CZAS: 0" << aktualny.godzina << ":" << aktualny.minuta << endl;
     else
         cout << setw(50) << "AKTUALNY CZAS: " << aktualny.godzina << ":" << aktualny.minuta << endl;
+}
+
+void rozklad(czas_aktualny aktualny)
+{
+    aktualnyCzas(aktualny);
 
     for(int i = 0; i < content.size(); i++){
         for(int j = 0; j < content[i].size(); j++)
@@ -64,7 +69,7 @@ void rozklad(struct czas aktualny)
     }
 }
 
-void aktualizujCzas(struct czas *akt){
+void aktualizujCzas(czas_aktualny *akt){
     akt->minuta += 5;
     if(akt->minuta == 60)
     {

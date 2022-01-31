@@ -15,10 +15,13 @@ using namespace std;
 /**
  * Strukura reprezentująca czas
  */
+template <typename T>
 struct czas{
-    short godzina;
-    short minuta;
+    T godzina;
+    T minuta;
 };
+
+typedef czas<short> czas_aktualny;
 
 /**
  * Funkcja wyswietlajaca menu
@@ -33,17 +36,21 @@ void pobierzRozklad(string fname);
 
 /**
  * Funkcja wyswietlajaca aktualny rozklad
+ * @param aktualny strutura przechowująca czas
  */
-void rozklad(struct czas aktualny);
+void rozklad(czas_aktualny aktualny);
+
+/**
+ * Funkcja wyświelająca aktualny czas na stacji
+ * @param aktualny struktura przechowująca czas
+ */
+void aktualnyCzas(czas_aktualny aktualny);
 
 /**
  * Funkcja zmieniajaca aktualny czas na stacji, dla symulowania ruchu pociągów
+ * @param akt wskaźnik na strukturę czasu
  */
-void aktualizujCzas(struct czas* akt);
+void aktualizujCzas(czas_aktualny * akt);
 
-/**
- * Funkcja tworzaca pociąg
- */
-void dodajPociag();
 
 #endif //JIPP2_FUNKCJE_H
