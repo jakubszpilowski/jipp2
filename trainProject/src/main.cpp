@@ -93,6 +93,8 @@ int main(int argc, char* argv[]){
                         dokumentacja();
                         break;
                 }
+                system("PAUSE");
+                system("CLS");
             }while(op != 0);
         }
         else
