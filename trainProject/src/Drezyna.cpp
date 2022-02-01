@@ -10,7 +10,7 @@ Drezyna::Drezyna(string numer, int peron, const string& status, short godz, shor
 }
 
 void Drezyna::printTime() {
-    if(przejazd.godzina < 10 && przejazd.minuta)
+    if(przejazd.godzina < 10 && przejazd.minuta < 10)
         cout << "0" << przejazd.godzina << ":0" << przejazd.minuta << endl;
     else if(przejazd.godzina < 10 && przejazd.minuta > 10)
         cout << "0" << przejazd.godzina << ":" << przejazd.minuta << endl;

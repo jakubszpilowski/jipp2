@@ -42,8 +42,10 @@ void Stacja::usunPociag(string numer) {
 
     if (i == -1)
         cout << "Nie ma takiego pociagu" << endl;
-    else
+    else{
         pociagi.erase(pociagi.begin() + i);
+        cout << "Pomyslnie usunieto pociag\n";
+    }
 }
 
 void Stacja::edytujStatus(string numer, string nowyStatus) {
