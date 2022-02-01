@@ -6,9 +6,21 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "funkcje.h"
+#include <iomanip>
 
 using namespace std;
+
+/**
+ * Strukura reprezentująca czas
+ */
+template <typename T>
+struct czas{
+    T godzina;
+    T minuta;
+};
+
+typedef czas<short> czas_aktualny;
+
 
 /**
  * Klasa nadrzędna reprezentująca pociąg
@@ -16,59 +28,18 @@ using namespace std;
 class Train{
 protected:
     char typ;
-    string nazwa;
+    string numer;
     string relacja;
     int peron;
     string status;
 
 public:
+    Train(char, const string&, const string&, int, const string&);
     Train();
-    Train(char, string, string, int, string);
-    virtual void printTrain() = 0;
-    void setStatus(int i);
+    void setStatus(string nowyStatus);
     string getStatus() const;
-};
-
-/**
- * Klasa dziedzicząca po klasie Train
- */
-class Pasazerski: public Train{
-private:
-    czas_aktualny przyjazd;
-    czas_aktualny odjazd;
-
-public:
-    Pasazerski(string, string, int, string, short, short, short, short);
-    void printTime();
-    void printTrain();
-};
-
-
-/**
- * Klasa dziedzicząca po klasie Train
- */
-class Towarowy: public Train{
-private:
-    czas_aktualny przejazd;
-
-public:
-    Towarowy(string, int, string, short, short);
-    void printTime();
-    void printTrain();
-};
-
-
-/**
- * Klasa dziedzicząca po klasie pociąg
- */
-class Drezyna: public Train{
-private:
-    czas_aktualny przejazd;
-
-public:
-    Drezyna(int, string, short, short);
-    void printTime();
-    void printTrain();
+    string pobierzNumer() const;
+    virtual void printTrain() = 0;
 };
 
 #endif //JIPP2_TRAIN_H

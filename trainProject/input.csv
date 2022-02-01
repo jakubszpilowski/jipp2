@@ -1,1 +1,5 @@
-TYP,NAZWA,RELACJA,GODZINA PRZYJAZDU,GODZINA ODJAZDU,PERON,STATUS
+TYP,NAZWA,RELACJA,PRZYJAZD,ODJAZD,PERON,STATUS
+P,PKP,Krakow-Wwa,15:55,16:05,1,Jedzie
+P,PKP,WWa-Krakow,16:45,17:00,2,Jedzie
+T,Crago,Zakopane-Katowice,16:30,16:30,4,Zapowiedziany
+D,Pojazd Techniczny, Przejazd Techniczny,16:35,16:35,3,Jedzie
