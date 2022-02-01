@@ -6,8 +6,6 @@
 #define JIPP2_TOWAROWY_H
 #include "Train.h"
 
-
-
 /**
  * Klasa dziedzicząca po klasie Train
  */
@@ -16,8 +14,25 @@ protected:
     czas_aktualny przejazd;
 
 public:
-    Towarowy(const string&, const string&, int, const string&, short, short);
+    /**
+     * Konstruktor tworzącu obiekt klasy pociąg Towarowy
+     * @param numer numer pociągu
+     * @param relacja trasa pociągu
+     * @param peron numer peronu
+     * @param status status
+     * @param godzina godzina przejazdu
+     * @param minuta minuta przejazdu
+     */
+    Towarowy(const string& numer, const string& relacja, int peron, const string& status, short godzina, short minuta);
+
+    /**
+     * Funkcja formaztuje i drukuje czas przejazdu
+     */
     void printTime();
+
+    /**
+     * Funkcja drukuje informacje o pociągu
+     */
     void printTrain();
 };
 

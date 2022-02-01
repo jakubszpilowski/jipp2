@@ -12,6 +12,10 @@
 #include <iomanip>
 #include <limits>
 #include "Train.h"
+#include "Stacja.h"
+#include "Pasazerski.h"
+#include "Drezyna.h"
+#include "Towarowy.h"
 
 using namespace std;
 
@@ -24,5 +28,11 @@ void menu();
  * Funkcja wyświeltająca dokumentacje
  */
 void dokumentacja();
+
+/**
+ * Funkcja dodająca pociąg na stację
+ * @param s stacja
+ */
+void dodajPociag(Stacja *s);
 
 #endif //JIPP2_FUNKCJE_H

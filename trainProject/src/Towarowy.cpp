@@ -21,10 +21,11 @@ void Towarowy::printTime() {
 }
 
 void Towarowy::printTrain() {
-    cout << "Typ: Pociag towarowy" << endl;
-    cout << "Numer: " << this->numer << endl;
-    cout << "Peron: " << this->peron << endl;
-    cout << "Relacja: " << this->relacja << endl;
+    cout << "\n*Typ: Pociag towarowy" << endl;
+    cout << "\tNumer: " << this->numer << endl;
+    cout << "\tPeron: " << this->peron << endl;
+    cout << "\tRelacja: " << this->relacja << endl;
+    cout << "\tGodzina przejazdu: ";
     printTime();
-    cout << "Status: " << this->status << endl;
+    cout << "\tStatus: " << this->status << endl;
 }

@@ -7,7 +7,7 @@
 using namespace std;
 
 
-Train::Train(char typ, const string& nazwa, const string& relacja, int peron, const string& status): typ(typ), nazwa(nazwa),
+Train::Train(char typ, const string& numer, const string& relacja, int peron, const string& status): typ(typ), numer(numer),
     relacja(relacja), peron(peron), status(status){
 }
 

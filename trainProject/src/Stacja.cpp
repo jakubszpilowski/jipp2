@@ -11,18 +11,18 @@ Stacja::~Stacja() {
     cout << "Stacja usunieta" << endl;
 }
 
-void Stacja::dodajPociag(string numer, int peron, czas_aktualny przejazd, string status) {
-    this->pociagi.push_back(new Drezyna(numer, peron, status, przejazd.godzina, przejazd.minuta));
+void Stacja::dodajPociag(string numer, int peron, short godzina, short minuta, string status) {
+    this->pociagi.push_back(new Drezyna(numer, peron, status, godzina, minuta));
 }
 
-void Stacja::dodajPociag(string numer, string relacja, int peron, czas_aktualny przejazd, string status) {
-    this->pociagi.push_back(new Towarowy(numer, relacja, peron, status,przejazd.godzina, przejazd.minuta));
+void Stacja::dodajPociag(string numer, string relacja, int peron, short godzina, short minuta, string status) {
+    this->pociagi.push_back(new Towarowy(numer, relacja, peron, status, godzina, minuta));
 }
 
-void Stacja::dodajPociag(string numer, string relacja, int peron, czas_aktualny przyjazd,
-                         czas_aktualny odjazd, string status) {
-    this->pociagi.push_back(new Pasazerski(numer, relacja, peron, status, przyjazd.godzina, przyjazd.minuta,
-     odjazd.godzina, odjazd.minuta));
+void Stacja::dodajPociag(string numer, string relacja, int peron, short g_przy, short m_przy,
+                         short g_odj, short m_odj, string status) {
+    this->pociagi.push_back(new Pasazerski(numer, relacja, peron, status, g_przy, m_przy,
+     g_odj, m_odj));
 }
 
 int Stacja::znajdzPociag(string numer) {
@@ -142,7 +142,7 @@ void Stacja::pobierzPociagi() {
                 pociagi.push_back(new Drezyna(numer, peron, status, g_przy, m_przy));
             }
             else
-                dokumentacja();
+                exit(1);
         }
     }
     else{

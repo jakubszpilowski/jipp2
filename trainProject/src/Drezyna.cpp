@@ -21,10 +21,11 @@ void Drezyna::printTime() {
 }
 
 void Drezyna::printTrain() {
-    cout << "Typ: Pojazd techniczny" << endl;
-    cout << "Numer: " << this->numer << endl;
-    cout << "Peron: " << this->peron << endl;
-    cout << "Przejazd techniczny" << endl;
+    cout << "\n*Typ: Pojazd techniczny" << endl;
+    cout << "\tNumer: " << this->numer << endl;
+    cout << "\tPeron: " << this->peron << endl;
+    cout << "\tPrzejazd techniczny" << endl;
+    cout << "\tGodzina przejazdu: ";
     printTime();
-    cout << "Status: " << this->status << endl;
+    cout << "\tStatus: " << this->status << endl;
 }

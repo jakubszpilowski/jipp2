@@ -14,8 +14,24 @@ protected:
     czas_aktualny przejazd;
 
 public:
-    Drezyna(string numer, int, const string&, short, short);
+    /**
+     * Konstruktor tworzący obiekt Drezyna
+     * @param numer numer pociągu
+     * @param peron numer peronu
+     * @param status status
+     * @param godzina godzina przejazdu przez stację
+     * @param minuta minuta przejazdu przez stację
+     */
+    Drezyna(string numer, int peron, const string& status, short godzina, short minuta);
+
+    /**
+     * Funkcja drukująca (zformatowany) czas przejazdu przez stacje
+     */
     void printTime();
+
+    /**
+     * Funkcja drukująca informację na temat pociągu
+     */
     void printTrain();
 };
 

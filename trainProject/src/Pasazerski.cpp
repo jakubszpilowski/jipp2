@@ -34,13 +34,13 @@ void Pasazerski::odjazdCzas() {
 }
 
 void Pasazerski::printTrain() {
-    cout << "Typ: Pociag pasazerski" << endl;
-    cout << "Numer: " << this->numer << endl;
-    cout << "Peron: " << this->peron << endl;
-    cout << "Relacja: " << this->relacja << endl;
-    cout << "Godzina przyjazdu: ";
+    cout << "\n*Typ: Pociag pasazerski" << endl;
+    cout << "\tNumer: " << this->numer << endl;
+    cout << "\tPeron: " << this->peron << endl;
+    cout << "\tRelacja: " << this->relacja << endl;
+    cout << "\tGodzina przyjazdu: ";
     przyjazdCzas();
-    cout << "Godzina odjazdu: ";
+    cout << "\tGodzina odjazdu: ";
     odjazdCzas();
-    cout << "Status: " << this->status << endl;
+    cout << "\tStatus: " << this->status << endl;
 }

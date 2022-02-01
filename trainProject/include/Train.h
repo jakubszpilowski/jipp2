@@ -21,7 +21,6 @@ struct czas{
 
 typedef czas<short> czas_aktualny;
 
-
 /**
  * Klasa nadrzędna reprezentująca pociąg
  */
@@ -34,11 +33,42 @@ protected:
     string status;
 
 public:
-    Train(char, const string&, const string&, int, const string&);
+    /**
+     * Konstruktor klasy nadrzędnej reprezentującej pociąg
+     * @param typ typ pojazdu - P, T lub D
+     * @param numer numer pociągu
+     * @param relacja trasa
+     * @param peron numer peronu
+     * @param status status
+     */
+    Train(char typ, const string& numer, const string& relacja, int peron, const string& status);
+
+    /**
+     * Konstruktor domyślny
+     */
     Train();
+
+    /**
+     * Funkcja zmieniająca status pociągu
+     * @param nowyStatus status jaki przyjmie pociąg po zmianie
+     */
     void setStatus(string nowyStatus);
+
+    /**
+     * Funkcja do sprawdzenia statusu
+     * @return status
+     */
     string getStatus() const;
+
+    /**
+     * Funkcja zwracająca numer pociągu
+     * @return numer pociągu
+     */
     string pobierzNumer() const;
+
+    /**
+     * Metoda virtualna do wyświetlania informacji o pociągu
+     */
     virtual void printTrain() = 0;
 };
 
